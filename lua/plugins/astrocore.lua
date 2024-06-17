@@ -80,6 +80,10 @@ return {
         -- setting a mapping to false will disable it
         -- ["<C-S>"] = false,
         ["<C-\\>"] = { '<cmd>execute v:count . "ToggleTerm direction=float"<cr>', desc = "Toggle terminal" },
+
+        -- quick save
+        -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+        -- ["<C-\\>"] = { "<cmd>ToggleTerm<cr>", desc = "Toggle terminal" },
         ["<s-h>"] = { "<cmd>bp<cr>", desc = "Previous Buffer" },
         ["<s-l>"] = { "<cmd>bn<cr>", desc = "Next Buffer" },
       },
