@@ -22,6 +22,20 @@ return {
 
         -- install any other package
         "tree-sitter-cli",
+        -- add more arguments for adding more null-ls sources
+      },
+      -- handlers = {
+      --   pylint = function() end,
+      -- },
+    },
+  },
+  {
+    "jay-babu/mason-nvim-dap.nvim",
+    -- overrides `require("mason-nvim-dap").setup(...)`
+    opts = {
+      ensure_installed = {
+        "python",
+        -- add more arguments for adding more debuggers
       },
     },
   },
