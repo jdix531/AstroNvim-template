@@ -16,3 +16,7 @@ vim.filetype.add {
     ["~/%.config/foo/.*"] = "fooscript",
   },
 }
+
+-- Modifies when CR will trigger using autocompletion
+-- (helpful to prevent accidentally accepting common suggestions)
+vim.o.completeopt = "menu,menuone"

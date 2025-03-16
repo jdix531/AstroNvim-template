@@ -24,6 +24,9 @@ return {
         "stylua",
         -- add more arguments for adding more null-ls sources
       },
+      -- handlers = {
+      --   pylint = function() end,
+      -- },
     },
   },
   {
