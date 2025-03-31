@@ -15,7 +15,7 @@ return {
       large_buf = { size = 1024 * 256, lines = 10000 }, -- set global limits for large files for disabling features like treesitter
       autopairs = true, -- enable autopairs at start
       cmp = true, -- enable completion at start
-      diagnostics_mode = 3, -- diagnostic mode on start (0 = off, 1 = no signs/virtual text, 2 = no virtual text, 3 = on)
+      diagnostics = { virtual_text = true, virtual_lines = false }, -- diagnostic settings on startup
       highlighturl = true, -- highlight URLs at start
       notifications = true, -- enable notifications at start
     },
@@ -24,6 +24,19 @@ return {
       virtual_text = true,
       underline = true,
     },
+    -- passed to `vim.filetype.add`
+    -- filetypes = {
+    --   -- see `:h vim.filetype.add` for usage
+    --   extension = {
+    --     foo = "fooscript",
+    --   },
+    --   filename = {
+    --     [".foorc"] = "fooscript",
+    --   },
+    --   pattern = {
+    --     [".*/etc/foo/.*"] = "fooscript",
+    --   },
+    -- },
     -- vim options can be configured here
     options = {
       opt = { -- vim.opt.<key>
@@ -62,9 +75,10 @@ return {
 
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
-        ["<Leader>b"] = { desc = "Buffers" },
-        -- quick save
-        -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+        -- ["<Leader>b"] = { desc = "Buffers" },
+
+        -- setting a mapping to false will disable it
+        -- ["<C-S>"] = false,
         ["<C-\\>"] = { '<cmd>execute v:count . "ToggleTerm direction=float"<cr>', desc = "Toggle terminal" },
         ["<s-h>"] = { "<cmd>bp<cr>", desc = "Previous Buffer" },
         ["<s-l>"] = { "<cmd>bn<cr>", desc = "Next Buffer" },
@@ -74,6 +88,7 @@ return {
         -- setting a mapping to false will disable it
         -- ["<esc>"] = false,
         ["<C-\\>"] = { '<cmd>execute v:count . "ToggleTerm direction=float"<cr>', desc = "Toggle terminal" },
+        -- ["<C-[>"] = { "<C-\\><C-n>", desc = "Enter Normal Mode From Terminal Mode" },
         ["<esc><esc>"] = { "<C-\\><C-n>", desc = "Enter Normal Mode From Terminal Mode" },
         -- ["<Leader>b"] = { desc = "Buffers" },
         -- setting a mapping to false will disable it
