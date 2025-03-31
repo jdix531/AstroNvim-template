@@ -37,6 +37,19 @@ return {
         [".*/etc/foo/.*"] = "fooscript",
       },
     },
+    -- filetypes = {
+    --   -- see `:h vim.filetype.add` for usage
+    --   extension = {
+    --     foo = "fooscript",
+    --   },
+    --   filename = {
+    --     [".foorc"] = "fooscript",
+    --   },
+    --   pattern = {
+    --     [".*/etc/foo/.*"] = "fooscript",
+    --   },
+    -- },
+>>>>>>> 667fffe (upgrade to astronvim v5 (nvim .11+))
     -- vim options can be configured here
     options = {
       opt = { -- vim.opt.<key>
