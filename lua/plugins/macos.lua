@@ -1,4 +1,4 @@
-if vim.loop.os_uname().sysname == "Darwin" then
+if vim.uv.os_uname().sysname == "Darwin" then
   return {
     {
       "Cliffback/netcoredbg-macOS-arm64.nvim",
