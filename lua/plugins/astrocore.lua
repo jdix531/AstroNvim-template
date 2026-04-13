@@ -37,25 +37,13 @@ return {
         [".*/etc/foo/.*"] = "fooscript",
       },
     },
-    -- filetypes = {
-    --   -- see `:h vim.filetype.add` for usage
-    --   extension = {
-    --     foo = "fooscript",
-    --   },
-    --   filename = {
-    --     [".foorc"] = "fooscript",
-    --   },
-    --   pattern = {
-    --     [".*/etc/foo/.*"] = "fooscript",
-    --   },
-    -- },
     -- vim options can be configured here
     options = {
       opt = { -- vim.opt.<key>
         relativenumber = true, -- sets vim.opt.relativenumber
         number = true, -- sets vim.opt.number
         spell = false, -- sets vim.opt.spell
-        signcolumn = "auto", -- sets vim.opt.signcolumn to auto
+        signcolumn = "yes", -- sets vim.opt.signcolumn to yes (default auto)
         wrap = true, -- sets vim.opt.wrap
       },
       g = { -- vim.g.<key>
@@ -105,6 +93,7 @@ return {
         ["<C-\\>"] = { '<cmd>execute v:count . "ToggleTerm direction=float"<cr>', desc = "Toggle terminal" },
         -- ["<C-[>"] = { "<C-\\><C-n>", desc = "Enter Normal Mode From Terminal Mode" },
         ["<esc><esc>"] = { "<C-\\><C-n>", desc = "Enter Normal Mode From Terminal Mode" },
+        ["<C-[><C-[>"] = { "<C-\\><C-n>", desc = "Enter Normal Mode From Terminal Mode" },
       },
     },
   },

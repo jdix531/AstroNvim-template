@@ -5,24 +5,30 @@
 -- This guarantees that the specs are processed before any user plugins.
 
 ---@type LazySpec
+-- return {
+--   "AstroNvim/astrocommunity",
+--   { import = "astrocommunity.pack.lua" },
+--   -- import/override with your plugins folder
+-- }
+
 return {
   "AstroNvim/astrocommunity",
   -- { import = "astrocommunity.pack.ansible" },
-  { import = "astrocommunity.pack.cpp" },
-  { import = "astrocommunity.pack.cs" },
+  -- { import = "astrocommunity.pack.cpp" },
+  -- { import = "astrocommunity.pack.cs" }, -- has bug in V6
   { import = "astrocommunity.pack.go" },
-  { import = "astrocommunity.pack.java" },
+  -- { import = "astrocommunity.pack.java" },
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.lua" },
-  { import = "astrocommunity.pack.ps1" },
-  { import = "astrocommunity.pack.python-ruff" },
+  -- { import = "astrocommunity.pack.ps1" },
+  -- { import = "astrocommunity.pack.python-ruff" },
   { import = "astrocommunity.pack.cmake" },
   { import = "astrocommunity.pack.docker" },
-  { import = "astrocommunity.pack.rust" },
-  { import = "astrocommunity.pack.sql" },
+  -- { import = "astrocommunity.pack.rust" },
+  -- { import = "astrocommunity.pack.sql" },
   { import = "astrocommunity.pack.terraform" },
-  { import = "astrocommunity.pack.typescript" },
+  -- { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.yaml" },
   -- import/override with your plugins folder
-  { import = "astrocommunity.ai.opencode-nvim" },
+  -- { import = "astrocommunity.ai.opencode-nvim" },
 }
