@@ -31,4 +31,5 @@ return {
   { import = "astrocommunity.pack.yaml" },
   -- import/override with your plugins folder
   { import = "astrocommunity.ai.opencode-nvim" },
+  { import = "astrocommunity.remote-development" },
 }
